@@ -12,6 +12,7 @@ import {addOpcion, readOpcion, removeOpcion, listOpcion, modifyOpcion} from '../
 import { Modify } from '../src/yargs/modify_yargs';
 import * as Modificar from '../src/modify';
 import { RequestType, client } from '../src/client';
+import { server } from '../src/server';
 import {EventEmitter} from 'events';
 
 
@@ -119,13 +120,13 @@ describe('Test de la Clase Modify',() => {
 
 
 
-describe('MessageEventEmitterClient', () => {
+describe('test', () => {
   it('Should emit a message event once it gets a complete message', (done) => {
     const socket = new EventEmitter();
     //const client = new MessageEventEmitterClient(socket);
 
-    client.on('message', (message) => {
-      expect(message).to.be.eql({'type': 'add', 'user': 'Marcos', 'body': 'hola', 'color': 'green'});
+    client.on('data', (data) => {
+      expect(data).to.be.eql({'type': 'add', 'accses': 'Marcos', 'body': 'hola', 'color': 'green'});
       done();
     });
 
