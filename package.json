@@ -8,7 +8,8 @@
     "start": "tsc-watch --onSuccess \"node dist/index.js\"",
     "test": "mocha --timeout 10000",
     "doc": "typedoc",
-    "coverage": "nyc npm test && nyc report --reporter=lcov"
+    "coverage": "nyc npm test && nyc report --reporter=lcov",
+    "coveragee": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
