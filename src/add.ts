@@ -4,8 +4,6 @@ import { ResponseType } from './server';
 import { RequestType } from './client';
 
 
-
-
 /**
  * Clase Add que contiene un método para añadir notas 
  */
@@ -28,7 +26,6 @@ export class Add {
           b.success = false;
           b.notes?.push(String(err));
           return b;
-          //return console.error(chalk.red(err));
         }
       });
     }
@@ -36,8 +33,6 @@ export class Add {
       b.success = false;
       b.notes?.push('Note title taken!');
       return b;
-
-      //return console.error(chalk.red('Note title taken!'));
     }
     else{
       let info = {
@@ -52,7 +47,6 @@ export class Add {
             b.success = false;
           b.notes?.push(String(err));
           return b;
-            //return console.error(chalk.red(err));
           }
         });
         b.notes?.push(`New note added!`);

@@ -3,13 +3,13 @@ import { RequestType } from '../client';
 import { client } from '../client';
 
 /**
- * Clase Remove que contiene un método para borrar notas
+ * Clase Remove que contiene un método para preparar el ResponseType 
  */
 export class Remove {
   constructor(){}
 
   /**
-  * Método removeNote que elimina una nota de un usuario
+  * Método removeNote que prepara el ResponseType
   */
   removeNote(){
     yargs.command({

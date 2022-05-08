@@ -1,5 +1,3 @@
-import  chalk from 'chalk';
-import yargs from 'yargs';
 import fs from 'fs';
 import { ResponseType } from './server';
 import { RequestType } from './client';
@@ -22,8 +20,6 @@ export class Modify {
       b.success = false;
       b.notes?.push(`No note found`);
       return b;
-
-      //console.error(chalk.red(`No note found`));
     }
     else{
       let info = {
@@ -37,7 +33,6 @@ export class Modify {
             b.success = false;
             b.notes?.push(String(err));
             return b;
-            //return console.error(chalk.red(err));
           }
         });
     }

@@ -7,12 +7,12 @@ exports.List = void 0;
 const yargs_1 = __importDefault(require("yargs"));
 const client_1 = require("../client");
 /**
- * Clase List que contine un método que lista las notas de un usuario
+ * Clase List que contine un método para preparar el ResponseType
  */
 class List {
     constructor() { }
     /**
-    * Método listNote que lista las notas de un usuario
+    * Método listNote que prepara el ResponseType
     */
     listNote() {
         yargs_1.default.command({

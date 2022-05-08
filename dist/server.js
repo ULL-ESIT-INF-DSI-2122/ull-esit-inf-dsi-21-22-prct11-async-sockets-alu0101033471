@@ -22,7 +22,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.hola = exports.a = void 0;
+exports.server = exports.a = void 0;
 const net = __importStar(require("net"));
 const add_1 = require("./add");
 const list_1 = require("./list");
@@ -31,7 +31,10 @@ const remove_1 = require("./remove");
 const modify_1 = require("./modify");
 const chalk_1 = __importDefault(require("chalk"));
 let b;
-exports.hola = net.createServer((connection) => {
+/**
+ * Conexion del servidor
+ */
+exports.server = net.createServer((connection) => {
     console.log(chalk_1.default.green('A client has connected.'));
     connection.on('data', (data) => {
         exports.a = JSON.parse(data.toString());
@@ -56,18 +59,35 @@ exports.hola = net.createServer((connection) => {
             b = modifyOpcion.modifyNote(exports.a);
         }
         if (exports.a.type === `list` && b.success === true) {
+            connection.write(chalk_1.default.green(`Conexión del tipo ${JSON.stringify(b.type, null, 2)}` +
+                '\n'));
             b.notes?.forEach(element => {
                 let jsonData = require(`./${String(exports.a.user)}/${String(element)}.json`);
                 connection.write(chalk_1.default[`${jsonData.color}`](JSON.stringify(element, null, 2) +
                     '\n'));
             });
         }
+        else if (exports.a.type === `read` && b.success === true) {
+            connection.write(chalk_1.default.green(`Conexión del tipo ${JSON.stringify(b.type, null, 2)}` +
+                '\n'));
+            let jsonData = require(`./${String(exports.a.user)}/${String(b.notes?.[0])}.json`);
+            connection.write(chalk_1.default.green(`Titulo: `));
+            connection.write(chalk_1.default[`${jsonData.color}`](JSON.stringify(b.notes?.[0], null, 2) +
+                '\n'));
+            connection.write(chalk_1.default.green(`Mensaje: `));
+            connection.write(chalk_1.default[`${jsonData.color}`](JSON.stringify(b.notes?.[1], null, 2) +
+                '\n'));
+        }
         else if (b.success === true) {
-            connection.write(chalk_1.default.green(JSON.stringify(b, null, 2) +
+            connection.write(chalk_1.default.green(`Conexión del tipo ${JSON.stringify(b.type, null, 2)}` +
+                '\n'));
+            connection.write(chalk_1.default.green(JSON.stringify(b.notes?.[0], null, 2) +
                 '\n'));
         }
         else {
-            connection.write(chalk_1.default.red(JSON.stringify(b, null, 2) +
+            connection.write(chalk_1.default.red(`Conexión del tipo ${JSON.stringify(b.type, null, 2)}` +
+                '\n'));
+            connection.write(chalk_1.default.red(JSON.stringify(b.notes?.[0], null, 2) +
                 '\n'));
         }
     });

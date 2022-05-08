@@ -1,20 +1,15 @@
 {
   "entryPoints": [
-    "./src/ejercicio-2.ts",      
-    "./src/ejercicio-3/add.ts",      
-    "./src/ejercicio-3/index.ts",      
-    "./src/ejercicio-3/list.ts",      
-    "./src/ejercicio-3/modify.ts",      
-    "./src/ejercicio-3/observador.ts",      
-    "./src/ejercicio-3/read.ts",      
-    "./src/ejercicio-3/add.ts",      
-    "./src/ejercicio-4/crear.ts",
-    "./src/ejercicio-4/index.ts",      
-    "./src/ejercicio-4/movercopiar.ts",      
-    "./src/ejercicio-4/list.ts",   
-    "./src/ejercicio-4/read.ts",  
-    "./src/ejercicio-4/remove.ts",    
-    "./src/ejercicio-4/saber.ts"    
+    "./src/add.ts",      
+    "./src/yargs/add_yargs.ts",            
+    "./src/list.ts", 
+    "./src/yargs/list_yargs.ts",     
+    "./src/modify.ts",   
+    "./src/yargs/modify_yargs.ts",         
+    "./src/read.ts", 
+    "./src/yargs/read_yargs.ts",               
+    "./src/remove.ts", 
+    "./src/yargs/remove_yargs.ts"      
      
   ],
   "out": "./docs"

@@ -7,12 +7,12 @@ exports.Modify = void 0;
 const yargs_1 = __importDefault(require("yargs"));
 const client_1 = require("../client");
 /**
- * Clase Modify que contine un método que modifica las notas de un usuario
+ * Clase Modify que contine un método para preparar el ResponseType
  */
 class Modify {
     constructor() { }
     /**
-    * Método modifyNote que modifica las notas de un usuario
+    * Método modifyNote que prepara el ResponseType
     */
     modifyNote() {
         yargs_1.default.command({

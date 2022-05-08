@@ -5,13 +5,13 @@ import { client } from '../client';
 
 
 /**
- * Clase Add que contiene un método para añadir notas 
+ * Clase Add que contiene un método para preparar el ResponseType 
  */
 export class Add {
   constructor(){}
 
   /**
-  * Método addNote que añade una nota
+  * Método addNote que prepara el ResponseType
   */
   addNote(){
     yargs.command({

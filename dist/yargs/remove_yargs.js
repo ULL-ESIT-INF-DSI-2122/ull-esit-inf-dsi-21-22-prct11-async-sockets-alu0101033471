@@ -7,12 +7,12 @@ exports.Remove = void 0;
 const yargs_1 = __importDefault(require("yargs"));
 const client_1 = require("../client");
 /**
- * Clase Remove que contiene un método para borrar notas
+ * Clase Remove que contiene un método para preparar el ResponseType
  */
 class Remove {
     constructor() { }
     /**
-    * Método removeNote que elimina una nota de un usuario
+    * Método removeNote que prepara el ResponseType
     */
     removeNote() {
         yargs_1.default.command({

@@ -1,10 +1,10 @@
 /**
- * Clase Read que contiene un método para leer notas
+ * Clase Read que contiene un método para preparar el ResponseType
  */
 export declare class Read {
     constructor();
     /**
-    * Método readNote que lee una nota de un usuario
+    * Método readNote que prepara el ResponseType
     */
     readNote(): void;
 }

@@ -7,12 +7,12 @@ exports.Read = void 0;
 const yargs_1 = __importDefault(require("yargs"));
 const client_1 = require("../client");
 /**
- * Clase Read que contiene un método para leer notas
+ * Clase Read que contiene un método para preparar el ResponseType
  */
 class Read {
     constructor() { }
     /**
-    * Método readNote que lee una nota de un usuario
+    * Método readNote que prepara el ResponseType
     */
     readNote() {
         yargs_1.default.command({

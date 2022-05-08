@@ -23,12 +23,10 @@ class Remove {
             b.success = false;
             b.notes?.push(`No note found`);
             return b;
-            //console.error(chalk.red(`No note found`));
         }
         else {
             fs_1.default.unlinkSync(`./dist/${String(a.user)}/${String(a.title)}.json`);
             b.notes?.push(`Note ${String(a.title)} removed!`);
-            //console.log(chalk.green(`Note ${String(a.title)} removed!`));
         }
         return b;
     }

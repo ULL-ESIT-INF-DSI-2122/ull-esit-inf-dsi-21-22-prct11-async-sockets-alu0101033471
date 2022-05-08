@@ -1,10 +1,10 @@
 /**
- * Clase Modify que contine un método que modifica las notas de un usuario
+ * Clase Modify que contine un método para preparar el ResponseType
  */
 export declare class Modify {
     constructor();
     /**
-    * Método modifyNote que modifica las notas de un usuario
+    * Método modifyNote que prepara el ResponseType
     */
     modifyNote(): void;
 }

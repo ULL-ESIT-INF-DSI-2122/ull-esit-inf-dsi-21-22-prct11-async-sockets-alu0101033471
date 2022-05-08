@@ -1,7 +1,5 @@
-import  chalk from 'chalk';
-import yargs from 'yargs';
 import fs from 'fs';
-import { ResponseType, hola } from './server';
+import { ResponseType} from './server';
 import { RequestType } from './client';
 /**
  * Clase List que contine un método que lista las notas de un usuario

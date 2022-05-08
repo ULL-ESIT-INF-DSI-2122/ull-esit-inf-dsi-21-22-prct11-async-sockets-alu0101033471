@@ -1,10 +1,10 @@
 /**
- * Clase List que contine un método que lista las notas de un usuario
+ * Clase List que contine un método para preparar el ResponseType
  */
 export declare class List {
     constructor();
     /**
-    * Método listNote que lista las notas de un usuario
+    * Método listNote que prepara el ResponseType
     */
     listNote(): void;
 }

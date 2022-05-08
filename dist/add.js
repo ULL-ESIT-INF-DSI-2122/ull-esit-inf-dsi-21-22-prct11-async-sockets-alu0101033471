@@ -26,7 +26,6 @@ class Add {
                     b.success = false;
                     b.notes?.push(String(err));
                     return b;
-                    //return console.error(chalk.red(err));
                 }
             });
         }
@@ -34,7 +33,6 @@ class Add {
             b.success = false;
             b.notes?.push('Note title taken!');
             return b;
-            //return console.error(chalk.red('Note title taken!'));
         }
         else {
             let info = {
@@ -48,7 +46,6 @@ class Add {
                     b.success = false;
                     b.notes?.push(String(err));
                     return b;
-                    //return console.error(chalk.red(err));
                 }
             });
             b.notes?.push(`New note added!`);

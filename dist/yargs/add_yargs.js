@@ -7,12 +7,12 @@ exports.Add = void 0;
 const yargs_1 = __importDefault(require("yargs"));
 const client_1 = require("../client");
 /**
- * Clase Add que contiene un método para añadir notas
+ * Clase Add que contiene un método para preparar el ResponseType
  */
 class Add {
     constructor() { }
     /**
-    * Método addNote que añade una nota
+    * Método addNote que prepara el ResponseType
     */
     addNote() {
         yargs_1.default.command({
