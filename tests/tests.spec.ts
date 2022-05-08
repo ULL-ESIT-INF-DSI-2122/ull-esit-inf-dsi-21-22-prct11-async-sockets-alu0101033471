@@ -13,7 +13,7 @@ import { Modify } from '../src/yargs/modify_yargs';
 import * as Modificar from '../src/modify';
 import { RequestType, client } from '../src/client';
 import { server } from '../src/server';
-import {EventEmitter} from 'events';
+//import {EventEmitter} from 'events';
 
 
 let request1: RequestType = {
